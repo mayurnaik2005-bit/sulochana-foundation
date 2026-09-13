@@ -1,6 +1,9 @@
 {
   "name": "sulochana-foundation-workspace",
   "private": true,
+  "workspaces": [
+    "sulochana-foundation"
+  ],
   "scripts": {
     "dev": "npm --prefix sulochana-foundation run dev",
     "build": "npm --prefix sulochana-foundation run build",
