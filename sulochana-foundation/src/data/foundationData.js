@@ -54,6 +54,17 @@ export const foundationData = {
       industryExposure: "7 years administrative experience in Academic Research, Management and Development",
       academicAffiliation: "Research Associate for various research projects at National and International level",
       bio: "Accomplished researcher and educator with extensive administrative and teaching experience across prominent universities, leading educational advancement and social welfare programs."
+    },
+    {
+      id: "founder-3",
+      name: "Dikshant Jadhav",
+      role: "Founder",
+      title: "Chemistry Student",
+      image: "/assets/founder3.png",
+      education: [
+        "Pursuing Chemistry"
+      ],
+      bio: "A passionate young founder committed to the vision of Sulochana Foundation, bringing fresh perspectives and energy to the foundation's mission of societal upliftment and community welfare."
     }
   ],
 

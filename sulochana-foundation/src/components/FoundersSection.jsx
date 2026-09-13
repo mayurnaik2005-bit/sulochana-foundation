@@ -261,7 +261,81 @@ export default function FoundersSection() {
               </div>
             )}
 
+            {/* Founder 3 Card */}
+            {activeIndex === 2 && (
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fadeIn">
+                
+                {/* Left Column: Photo in Circular Format & Properly Positioned Tag */}
+                <div className="lg:col-span-4 flex flex-col items-center text-center">
+                  <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full p-1.5 bg-gradient-to-tr from-emerald-500 via-green-400 to-teal-400 shadow-xl">
+                    <div className="w-full h-full rounded-full overflow-hidden border-4 border-white bg-slate-100">
+                      <img 
+                        src="/assets/founder3.png" 
+                        alt="Dikshant Jadhav" 
+                        className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "assets/founder3.png";
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Clean, perfectly aligned tag */}
+                  <div className="mt-4 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-950 border border-emerald-300 text-xs font-extrabold shadow-sm">
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
+                    <span>Founder</span>
+                  </div>
+
+                  <h3 className="mt-3 text-xl sm:text-2xl font-bold font-sans text-slate-900">
+                    Dikshant Jadhav
+                  </h3>
+                  <p className="text-xs sm:text-sm text-emerald-800 font-bold mt-1">
+                    Chemistry Student
+                  </p>
+                </div>
+
+                {/* Right Column: Education & Bio */}
+                <div className="lg:col-span-8 space-y-4">
+                  
+                  {/* Education */}
+                  <div className="p-5 bg-emerald-50/80 rounded-2xl border border-emerald-200">
+                    <div className="flex items-center gap-2 text-xs font-bold text-emerald-950 uppercase tracking-wider mb-2.5">
+                      <GraduationCap className="w-4 h-4 text-emerald-700" />
+                      <span>Educational Background</span>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {founders[2].education.map((edu) => (
+                        <span 
+                          key={edu}
+                          className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-white text-slate-800 rounded-xl border border-slate-200 shadow-sm"
+                        >
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                          <span>{edu}</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Bio */}
+                  <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div className="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
+                      <BookOpen className="w-4 h-4 text-emerald-600" />
+                      <span>About</span>
+                    </div>
+                    <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                      {founders[2].bio}
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            )}
+
           </div>
+
 
           {/* Continuous Auto-slide Indicator dots */}
           <div className="flex justify-center items-center gap-2 mt-6">
